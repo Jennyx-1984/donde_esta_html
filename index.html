@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulary</title>
-    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <!-- cabecera-->
-    <header>
+    
+    <div>
         <h1>Log in</h1>
         <h2>Don't have an account? <a href="www.google.com" class="register">sign Up</a></h2>
         <!-- la clase capa-botones es para reestructurar los botones que estén uno al lado del otro-->
@@ -17,13 +16,10 @@
         <button><img src="assets/google-removebg-preview.png" alt="logo google" class="btn-image"> Sign in with Google</button>
         <div><img src="assets/facebook.png" alt="logo facebook" class="btn2-image"></div>
         </div>    
-    </header>
     <!-- linea separatoria de la cabecera y el formulario. Utiliza la clase linea-or con pseudo-elemento ::before
      y ::after para añadir las lineas con border bottom. Ajustar al gusto-->
-    <div class="linea-or"><strong>OR</strong></div>
+    <div class="linea-or"><span>OR</span></div>
     
-    <!-- Aqui empieza la parte principal de la página-->
-    <main>
 
         <!-- Inicio del formulario. El atributo action está vacio porque no se realmente donde se tiene que
          mandar el formulario. Si se pasa por un HTML validator, obviamente, va a dar error, pero desconocemos
@@ -33,7 +29,8 @@
              borde del fieldset-->
             <fieldset>
                 <!-- cada div contiene una label y un input, agrupados para ser formateados por la clase campo
-                 para ponerlos uno debajo del otro, de modo que quede la label arriba, y el input debajo.-->
+                 para ponerlos uno debajo del otro, de modo que quede la label arriba, y el input debajo.
+                 De esta forma tenemos más control sobre los campos.-->
                 <div class="campo">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter Email" tabindex="1" required accesskey="e">
@@ -49,9 +46,9 @@
              un target con button[type="submit"]-->
             <div class="campo">
                 <button type="submit">Log In</button>
-                <div><a href="">Forgot Password?</a></div>
+                <div><a href="#">Forgot Password?</a></div>
             </div>
         </form>
-    </main>
+    </div>
 </body>
 </html>
